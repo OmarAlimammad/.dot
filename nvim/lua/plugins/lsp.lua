@@ -31,7 +31,7 @@ return {
       virtual_text = {
         prefix = "",
         format = function(diagnostic)
-          return " " .. diagnostic.message
+          return "󰣑 " .. diagnostic.message
         end,
       },
 
