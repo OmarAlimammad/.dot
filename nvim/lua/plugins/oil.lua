@@ -16,6 +16,6 @@ return {
       },
     })
 
-    vim.keymap.set("n", "<leader>f", require("oil").open_float)
+    vim.keymap.set("n", "<leader>z", require("oil").open_float)
   end
 }

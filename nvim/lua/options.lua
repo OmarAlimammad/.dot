@@ -6,9 +6,9 @@ vim.opt.mouse = "a"
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 
-vim.opt.signcolumn = "no"
-
 vim.opt.scrolloff = 10
+
+vim.opt.signcolumn = "no"
 
 vim.opt.laststatus = 0
 vim.opt.statusline = ""
@@ -21,4 +21,4 @@ function _G.FoldText()
 end
 
 vim.opt.fillchars:append({ eob = " ", fold = " " })
-
+vim.opt.fillchars:append({ eob = " ", fold = " " })

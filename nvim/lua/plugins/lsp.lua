@@ -3,7 +3,7 @@ return {
   name = "lspconfig",
   dependencies = {
     { "williamboman/mason.nvim", name = "mason" },
-    { "nvim-treesitter/nvim-treesitter", name = "treesitter" },
+    { "nvim-treesitter/nvim-treesitter", name = "treesitter", branch = "master" },
   },
   config = function()
     require("mason").setup({
@@ -12,19 +12,19 @@ return {
       }
     })
 
-    require("nvim-treesitter").setup({
-      auto_install = true,
-      highlight = {
-        enable = true,
-        additional_vim_regex_highlighting = false,
-      }
-    })
-
     vim.lsp.enable("lua_ls")
     vim.lsp.enable("clangd")
 
     vim.lsp.config("clangd", {
       cmd = { "clangd", "--header-insertion=never", "--function-arg-placeholders=false" }
+    })
+
+    require("nvim-treesitter.configs").setup({
+      auto_install = true,
+      highlight = {
+        enable = true,
+        additional_vim_regex_highlighting = false,
+      }
     })
 
     vim.diagnostic.config({

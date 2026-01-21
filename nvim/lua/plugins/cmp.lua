@@ -1,7 +1,6 @@
 return {
   "saghen/blink.cmp",
   dependencies = {
-    { "rafamadriz/friendly-snippets" },
     { "windwp/nvim-autopairs" },
   },
   version = "1.*",
