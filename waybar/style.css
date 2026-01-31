@@ -44,16 +44,11 @@ window#waybar {
 }
 
 
-#custom-media-icon {
-  padding: 2px 8px;
-  color: #31748f;
-  border-top: 2px solid #31748f;
-}
-
+#custom-media-icon,
 #custom-media-prev,
 #custom-media-name,
 #custom-media-next {
-  padding: 2px 6px;
+  padding: 2px 8px;
   color: #31748f;
   border-top: 2px solid #31748f;
 }
