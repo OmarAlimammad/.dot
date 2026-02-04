@@ -1,10 +1,11 @@
 * {
   font-family: "JetBrainsMono Nerd Font";
   font-weight: bold;
+  border: none;
 }
 
 window#waybar {
-  background-color: #191724;
+  background-color: rgba(25, 23, 36, 0.7);
 }
 
 #window {
@@ -12,35 +13,32 @@ window#waybar {
 }
 
 #workspaces {
-  padding: 2px;
+  margin: 4px;
 }
 
 #workspaces button {
-  padding: 2px 2px;
-  border-top: 2px solid #191724;
+  padding: 0 2px;
+  color: #6e6a86;
 }
 
 #workspaces button.active {
-  color: #f6c177;
-  border-top: 2px solid #f6c177;
+  color: #ebbcba;
 }
 
 #battery {
   padding: 2px 8px;
   color: #c4a7e7;
-  border-top: 2px solid #c4a7e7;
 }
 
 #pulseaudio {
   padding: 2px 8px;
   color: #9ccfd8;
-  border-top: 2px solid #9ccfd8;
 }
 
 #clock {
   padding: 2px 8px;
+  margin-right: 4px;
   color: #ebbcba;
-  border-top: 2px solid #ebbcba;
 }
 
 
@@ -50,5 +48,4 @@ window#waybar {
 #custom-media-next {
   padding: 2px 8px;
   color: #31748f;
-  border-top: 2px solid #31748f;
 }

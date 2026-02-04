@@ -7,7 +7,7 @@
   "group/media": {
     "orientation": "horizontal",
     "drawer": {
-      "transition-duration": 500,
+      "transition-duration": 200,
       "transition-left-to-right": false
     },
     "modules": [
@@ -47,7 +47,7 @@
   },
   "group/bat": {
     "orientation": "horizontal",
-    "drawer": { "transition-duration": 500, "transition-left-to-right": false },
+    "drawer": { "transition-duration": 200, "transition-left-to-right": false },
     "modules": [ "battery", "battery#text" ]
   },
 
@@ -63,7 +63,7 @@
   },
   "group/vol": {
     "orientation": "horizontal",
-    "drawer": { "transition-duration": 500, "transition-left-to-right": false },
+    "drawer": { "transition-duration": 200, "transition-left-to-right": false },
     "modules": [ "pulseaudio", "pulseaudio#text" ]
   },
   "pulseaudio": { "format": "󰓃", "tooltip": false },
@@ -71,9 +71,9 @@
 
   "group/time": {
     "orientation": "horizontal",
-    "drawer": { "transition-duration": 500, "transition-left-to-right": false },
+    "drawer": { "transition-duration": 200, "transition-left-to-right": false },
     "modules": [ "clock#icon", "clock" ]
   },
-  "clock#icon": { "format": "", "tooltip": false },
-  "clock": { "format": "{:%H:%M}", "tooltip": false }
+  "clock#icon": { "format": "󰥔", "tooltip": false },
+  "clock": { "format": "{:%H:%M}", "format-alt": "{:%a, %b %d}", "tooltip": false }
 }
