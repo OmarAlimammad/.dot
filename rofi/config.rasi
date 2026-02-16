@@ -4,14 +4,16 @@ configuration {
     display-drun:               "";
     display-window:             "";
     drun-display-format:        "{name}";
-    font:                       "JetBrainsMono Nerd Font 12";
+    font:                       "Lexend 12";
 }
 
 @theme "/dev/null"
 
 * {
-    bg:     #191724;
-    cur:    #1f1d2e;
+    /* Added Alpha channel (CC = 80% opacity) */
+    bg:     #191724cc; 
+    cur:    #1f1d2ecc;
+    
     fg:     #e0def4;
     muted:  #6e6a86;
     accent: #ebbcba;
@@ -28,7 +30,7 @@ configuration {
 
 window {
     width:              600px;
-    background-color:   @bg;
+    background-color:   @bg; /* Uses the transparent variable */
     border:             2px;
     border-color:       @accent;
     border-radius:      12px;
@@ -40,7 +42,7 @@ mainbox {
 
 inputbar {
     children:           [ prompt, entry ];
-    background-color:   @cur;
+    background-color:   @cur; /* Uses the transparent variable */
     padding:            12px;
 }
 

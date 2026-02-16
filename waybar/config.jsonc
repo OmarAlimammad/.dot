@@ -20,7 +20,7 @@
 
   "custom/media-icon": {
     "format": "",
-    "exec": "playerctl -p spotify metadata --format '{\"text\": \"\", \"tooltip\": \"\"}' --follow",
+    "exec": "playerctl -p spotify metadata --format '{\"text\": \"\uf1bc\", \"tooltip\": \"\"}' --follow",
     "tooltip": false
   },
 

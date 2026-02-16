@@ -1,6 +1,5 @@
 * {
-  font-family: "JetBrainsMono Nerd Font";
-  font-weight: bold;
+  font-family: "Lexend Medium", "Symbols Nerd Font", "Noto Color Emoji";
   border: none;
 }
 
@@ -13,12 +12,18 @@ window#waybar {
 }
 
 #workspaces {
-  margin: 4px;
+  margin: 0px 4px;
 }
 
 #workspaces button {
   padding: 0 2px;
   color: #6e6a86;
+}
+
+#workspaces button:hover {
+  background: inherit;
+  box-shadow: inherit;
+  text-shadow: inherit;
 }
 
 #workspaces button.active {
@@ -32,7 +37,8 @@ window#waybar {
 
 #pulseaudio {
   padding: 2px 8px;
-  color: #9ccfd8;
+  padding-left: 10px;
+  color: #c4a7e7;
 }
 
 #clock {
