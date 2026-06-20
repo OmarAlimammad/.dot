@@ -1,0 +1,76 @@
+{
+  "layer": "top",
+  "modules-left": [
+    "hyprland/workspaces",
+    "custom/spotify-prev",
+    "custom/spotify",
+    "custom/spotify-next"
+  ],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "network",
+    "custom/separator",
+    "pulseaudio",
+    "custom/separator",
+    "battery"
+  ],
+
+  "custom/spotify-prev": {
+    "format": "󰒮",
+    "exec": "playerctl -p spotify status 2>/dev/null | grep -qE 'Playing|Paused' && echo 'show'",
+    "on-click": "playerctl -p spotify previous",
+    "interval": 0
+  },
+
+  "custom/spotify-next": {
+    "format": "󰒭",
+    "exec": "playerctl -p spotify status 2>/dev/null | grep -qE 'Playing|Paused' && echo 'show'",
+    "on-click": "playerctl -p spotify next",
+    "interval": 0
+  },
+
+  "custom/spotify": {
+    "exec": "~/.config/waybar/media.sh",
+    "on-click": "playerctl -p spotify play-pause"
+  },
+
+  "hyprland/workspaces": {
+    "persistent-workspaces": {
+      "*": 5
+    }
+  },
+
+  "clock": {
+    "format": "{:%a, %d %b %H:%M}",
+    "tooltip-format": "<tt>{calendar}</tt>"
+  },
+
+  "network": {
+    "format-wifi": "{essid}",
+    "format-ethernet": "{ipaddr}",
+    "format-disconnected": "Disconnected",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)\n{ipaddr}\n{bandwidthDownBits} {bandwidthUpBits}",
+    "tooltip-format-ethernet": "{ifname}\n{ipaddr}\n{bandwidthDownBits} {bandwidthUpBits}",
+    "on-click": "ghostty -e iwctl"
+  },
+
+  "battery": {
+    "format": "{capacity}%",
+    "format-charging": "{capacity}% "
+  },
+
+  "pulseaudio": {
+    "format": "{volume}%",
+    "format-bluetooth": "{volume}% 󰂯",
+    "format-muted": "Muted",
+    "scroll-step": 1,
+    "on-click": "pavucontrol",
+    "on-click-right": "blueman-manager"
+  },
+
+  "custom/separator": {
+    "format": "|",
+    "tooltip": false,
+    "on-click": "playerctl previous"
+  }
+}

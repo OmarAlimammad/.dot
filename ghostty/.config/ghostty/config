@@ -1,0 +1,9 @@
+font-family = "FiraCode Nerd Font"
+font-style = "Medium"
+font-size = 12
+
+confirm-close-surface = false
+
+theme = Gruvbox Dark
+
+command = /bin/zsh

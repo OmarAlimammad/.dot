@@ -1,0 +1,13 @@
+[mgr]
+show_hidden = true
+sort_by = "natural"
+sort_dir_first = true
+show_symlink = true
+
+[preview]
+tab_size = 2
+
+[opener]
+play = [{ run = "mpv %s", orphan = true, for = "unix" }]
+edit = [{ run = "nvim %s", block = true, for = "unix" }]
+open = [{ run = "xdg-open %s1", desc = "Open" }]

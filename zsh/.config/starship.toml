@@ -1,0 +1,16 @@
+format = """
+$character\
+"""
+
+right_format = """
+$directory\
+"""
+
+[character]
+format = "$symbol "
+success_symbol = "[ 󰣇](#fabd2f)"
+error_symbol = "[ 󰣇](#fe8019)"
+vimcmd_symbol = "[ 󰣇](#d3869b)"
+
+[directory]
+format = "[$path](#8ec07c)"

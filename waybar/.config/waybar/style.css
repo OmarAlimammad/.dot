@@ -1,0 +1,85 @@
+/* bg0       #282828;
+   bg1       #3c3836;
+   fg0       #fbf1c7;
+   fg1       #ebdbb2;
+   gray      #a89984;
+  
+   red       #cc241d;
+   green     #98971a;
+   yellow    #d79921;
+   blue      #458588;
+   purple    #b16286;
+   aqua      #689d6a; */
+
+* {
+  font-family: "FiraCode Nerd Font";
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+window#waybar {
+  background-color: #282828;
+}
+
+#workspaces,
+#custom-separator,
+#clock,
+#network,
+#battery,
+#custom-spotify-prev,
+#custom-spotify,
+#custom-spotify-next,
+#pulseaudio {
+  padding: 2px 8px;
+}
+
+#workspaces {
+  margin-right: 60px;
+}
+
+#battery {
+  margin-right: 8px;
+  color: #458588;
+}
+
+#pulseaudio {
+  color: #d79921;
+}
+
+#network {
+  color: #98971a;
+}
+
+#clock {
+  color: #b16286;
+}
+
+#custom-spotify-prev,
+#custom-spotify,
+#custom-spotify-next {
+  color: #d65d0e;
+}
+
+#workspaces button {
+  padding: 0 4px;
+  color: #665c54;
+}
+
+#workspaces button.active {
+  color: #689d6a;
+}
+
+#workspaces button:hover {
+  box-shadow: inherit;
+  text-shadow: inherit;
+  background: inherit;
+}
+
+#workspaces {
+  margin-left: 4px;
+}
+
+
