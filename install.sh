@@ -7,10 +7,11 @@ packages=(
   nvim npm unzip
   waybar awww mako
   bluez blueman
+  brightnessctl
   pavucontrol
   rofi rofi-emoji cliphist
   hyprlock hypridle hyprshot hyprsunset
-  brave-bin spotify-adblock vesktop-bin
+  brave-bin spotify-adblock vesktop-bin franz
   thunar yazi fzf
   libreoffice-fresh
   stow nwg-look
@@ -23,6 +24,8 @@ packages=(
 cd paru
 makepkg -si
 cd ..
+
+paru -Syu --needed --noconfirm "${packages[@]}"
 
 stow ghostty hypr mako nvim rofi tmux waybar yazi zsh
 

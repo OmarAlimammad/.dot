@@ -40,6 +40,10 @@ window#waybar {
   margin-right: 60px;
 }
 
+#custom-separator {
+  color: #504945;
+}
+
 #battery {
   margin-right: 8px;
   color: #458588;
