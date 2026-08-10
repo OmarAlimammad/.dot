@@ -8,6 +8,8 @@
   ],
   "modules-center": ["clock"],
   "modules-right": [
+    "custom/caffeine",
+    "custom/separator",
     "network",
     "custom/separator",
     "pulseaudio",
@@ -46,22 +48,24 @@
   },
 
   "network": {
-    "format-wifi": "{essid}",
-    "format-ethernet": "{ipaddr}",
-    "format-disconnected": "Disconnected",
+    "format-wifi": "",
+    "format-ethernet": "󰈀",
+    "format-disconnected": "󰖪",
+    "tooltip-format": "{ifname} via {gwaddr}",
     "tooltip-format-wifi": "{essid} ({signalStrength}%)\n{ipaddr}\n{bandwidthDownBits} {bandwidthUpBits}",
     "tooltip-format-ethernet": "{ifname}\n{ipaddr}\n{bandwidthDownBits} {bandwidthUpBits}",
+    "tooltip-format-disconnected": "Disconnected",
     "on-click": "ghostty -e iwctl"
   },
 
   "battery": {
-    "format": "{capacity}%",
-    "format-charging": "{capacity}% "
+    "format": "{capacity}",
+    "format-charging": "{capacity} "
   },
 
   "pulseaudio": {
-    "format": "{volume}%",
-    "format-bluetooth": "{volume}% 󰂯",
+    "format": "{volume}",
+    "format-bluetooth": "{volume} 󰂯",
     "format-muted": "Muted",
     "scroll-step": 1,
     "on-click": "pavucontrol",
@@ -72,5 +76,13 @@
     "format": "|",
     "tooltip": false,
     "on-click": "playerctl previous"
+  },
+
+  "custom/caffeine": {
+    "exec": "~/.config/hypr/scripts/caffeine.sh --waybar",
+    "return-type": "json",
+    "interval": 0.5,
+    "format": "{}",
+    "on-click": "~/.config/hypr/scripts/caffeine.sh --toggle"
   }
 }

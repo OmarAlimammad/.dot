@@ -12,7 +12,7 @@
    aqua      #689d6a; */
 
 * {
-  font-family: "FiraCode Nerd Font";
+  font-family: "FiraCode Nerd Font Propo";
   font-size: 14px;
   font-weight: bold;
   border: none;
@@ -25,14 +25,15 @@ window#waybar {
 }
 
 #workspaces,
-#custom-separator,
 #clock,
 #network,
 #battery,
 #custom-spotify-prev,
 #custom-spotify,
 #custom-spotify-next,
-#pulseaudio {
+#custom-caffeine,
+#pulseaudio,
+#custom-separator {
   padding: 2px 8px;
 }
 
@@ -65,6 +66,14 @@ window#waybar {
 #custom-spotify,
 #custom-spotify-next {
   color: #d65d0e;
+}
+
+#custom-caffeine {
+  color: #7c6f64;
+}
+
+#custom-caffeine.inactive {
+  opacity: 0.3;
 }
 
 #workspaces button {

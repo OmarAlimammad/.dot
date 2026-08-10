@@ -11,7 +11,9 @@ packages=(
   pavucontrol
   rofi rofi-emoji cliphist
   hyprlock hypridle hyprshot hyprsunset
-  brave-bin spotify-adblock vesktop-bin franz
+  brave-bin spotify-adblock
+  vesktop-bin elecwhat-bin telegram-desktop
+  stremio-linux-shell
   thunar yazi fzf
   libreoffice-fresh
   stow nwg-look

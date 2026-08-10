@@ -3,12 +3,19 @@
 ------------------
 
 hl.monitor({
-  output   = "",
+  output   = "eDP-1",
   mode     = "preferred",
   position = "auto",
   scale    = "1",
 })
 
+hl.monitor({
+  output   = "HDMI-A-1",
+  mode     = "preferred",
+  position = "auto",
+  scale    = "1",
+  mirror   = "eDP-1",
+})
 
 -------------------
 ---- AUTOSTART ----
@@ -229,19 +236,24 @@ hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("ghostty"))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("~/.config/hypr/scripts/powermenu.sh"))
 hl.bind(mainMod .. " + Y", hl.dsp.exec_cmd("~/.config/hypr/scripts/sunset.sh"))
+hl.bind(mainMod .. " + C", hl.dsp.exec_cmd("~/.config/hypr/scripts/caffeine.sh"))
+hl.bind(mainMod .. " + G", hl.dsp.exec_cmd("~/.config/hypr/scripts/grayscale.sh"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("ghostty -e yazi"))
+hl.bind(mainMod .. " + F", hl.dsp.exec_cmd("ghostty -e aichat"))
 hl.bind(mainMod .. " + PERIOD", hl.dsp.exec_cmd("rofi -modi emoji -show emoji"))
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("cliphist list | rofi -dmenu | cliphist decode | wl-copy"))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("rofi -show drun"))
-hl.bind(mainMod .. " + F", hl.dsp.exec_cmd("ghostty -e aichat"))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
-hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
 hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m region"))
+hl.bind(mainMod .. " + U", hl.dsp.window.float({ action = "toggle" }))
 
 hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + K", hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + J", hl.dsp.focus({ direction = "down" }))
+hl.bind(mainMod .. " + O", hl.dsp.layout("togglesplit"))
+
+
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
