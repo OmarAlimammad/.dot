@@ -18,7 +18,7 @@ packages=(
   libreoffice-fresh
   stow nwg-look
   gruvbox-gtk-theme-git
-  gruvbox-icon-theme-git
+  gruvbox-plus-icon-theme
   xcursor-simp1e-gruvbox-dark
   ttf-firacode-nerd inter-font
 )

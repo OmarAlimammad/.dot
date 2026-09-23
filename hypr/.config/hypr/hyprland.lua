@@ -6,7 +6,7 @@ hl.monitor({
   output   = "eDP-1",
   mode     = "preferred",
   position = "auto",
-  scale    = "1",
+  scale    = "1.25",
 })
 
 hl.monitor({
@@ -26,7 +26,7 @@ hl.on("hyprland.start", function()
   hl.exec_cmd("waybar")
   hl.exec_cmd("mako")
   hl.exec_cmd("awww-daemon")
-  hl.exec_cmd("awww img ~/.dot/wallpaper.png --transition-type=none")
+  hl.exec_cmd("awww img ~/.dot/walpaper.jpg --transition-type=none")
   hl.exec_cmd("~/.config/hypr/scripts/battery.sh")
   hl.exec_cmd("wl-paste --type text --watch cliphist store")
   hl.exec_cmd("wl-paste --type image --watch cliphist store")
@@ -96,8 +96,8 @@ hl.config({
     rounding_power   = 0,
 
     -- Change transparency of focused and unfocused windows
-    active_opacity   = 0.95,
-    inactive_opacity = 0.95,
+    active_opacity   = 0.975,
+    inactive_opacity = 0.97,
 
     shadow           = {
       enabled      = true,
@@ -199,7 +199,7 @@ hl.config({
     kb_layout    = "us,az",
     kb_variant   = "",
     kb_model     = "",
-    kb_options   = "grp:win_space_toggle",
+    kb_options   = "ctrl:nocaps,grp:win_space_toggle",
     kb_rules     = "",
 
     follow_mouse = 1,

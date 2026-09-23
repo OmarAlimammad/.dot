@@ -17,6 +17,11 @@ vim.opt.laststatus = 0
 
 vim.opt.fillchars:append({ eob = " ", fold = " " })
 
+vim.keymap.set('i', '<C-h>', '<Left>')
+vim.keymap.set('i', '<C-l>', '<Right>')
+vim.keymap.set('i', '<C-j>', '<Down>')
+vim.keymap.set('i', '<C-k>', '<Up>')
+
 vim.api.nvim_create_autocmd("BufReadPost", {
   callback = function(args)
     local mark = vim.api.nvim_buf_get_mark(args.buf, '"')
