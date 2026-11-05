@@ -8,4 +8,3 @@ alias minecraft="prime-run freesmlauncher & disown"
 alias ls="eza --icons -la"
 
 source ~/.zsh/fsh/fsh.plugin.zsh
-source ~/.zsh/cp.zsh

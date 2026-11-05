@@ -17,6 +17,8 @@ vim.opt.laststatus = 0
 
 vim.opt.fillchars:append({ eob = " ", fold = " " })
 
+vim.g.c_no_curly_error = 1
+
 vim.keymap.set('i', '<C-h>', '<Left>')
 vim.keymap.set('i', '<C-l>', '<Right>')
 vim.keymap.set('i', '<C-j>', '<Down>')

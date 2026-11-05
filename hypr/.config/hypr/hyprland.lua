@@ -6,7 +6,7 @@ hl.monitor({
   output   = "eDP-1",
   mode     = "preferred",
   position = "auto",
-  scale    = "1.25",
+  scale    = "1.2",
 })
 
 hl.monitor({
@@ -41,6 +41,7 @@ end)
 hl.env("LIBVA_DRIVER_NAME", "nvidia")
 hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
 hl.env("XCURSOR_THEME", "Simp1e-Gruvbox-Dark")
+hl.env("HYPRCURSOR_THEME", "Simp1e-Gruvbox-Dark")
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
 hl.env("HYPRSHOT_DIR", "Pictures")
@@ -93,11 +94,11 @@ hl.config({
 
   decoration = {
     rounding         = 0,
-    rounding_power   = 0,
+    rounding_power   = 1,
 
     -- Change transparency of focused and unfocused windows
-    active_opacity   = 0.975,
-    inactive_opacity = 0.97,
+    active_opacity   = 1,
+    inactive_opacity = 1,
 
     shadow           = {
       enabled      = true,
@@ -186,6 +187,12 @@ hl.config({
   misc = {
     force_default_wallpaper = -1,    -- Set to 0 or 1 to disable the anime mascot wallpapers
     disable_hyprland_logo   = false, -- If true disables the random hyprland logo / anime girl background. :(
+  },
+
+  render = {
+    -- Don't switch the monitor to HDR when a fullscreen app (e.g. browser) requests it.
+    -- The laptop panel is SDR: auto-HDR causes a black flash (modeset) and a very dim image.
+    cm_auto_hdr = 0,
   },
 })
 

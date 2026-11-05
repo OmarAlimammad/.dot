@@ -1,0 +1,5 @@
+# paru build output
+paru/src/
+paru/pkg/
+paru/*.tar.gz
+paru/*.tar.zst
