@@ -20,21 +20,25 @@
   "custom/spotify-prev": {
     "format": "󰒮",
     "exec": "playerctl -p spotify status -F 2>/dev/null | while read -r s; do case \"$s\" in Playing|Paused) echo show ;; *) echo ;; esac; done",
-    "on-click": "playerctl -p spotify previous"
+    "on-click": "playerctl -p spotify previous",
+    "tooltip": false
   },
 
   "custom/spotify-next": {
     "format": "󰒭",
     "exec": "playerctl -p spotify status -F 2>/dev/null | while read -r s; do case \"$s\" in Playing|Paused) echo show ;; *) echo ;; esac; done",
-    "on-click": "playerctl -p spotify next"
+    "on-click": "playerctl -p spotify next",
+    "tooltip": false
   },
 
   "custom/spotify": {
     "exec": "~/.config/waybar/media.sh",
+    "return-type": "json",
     "on-click": "playerctl -p spotify play-pause"
   },
 
   "hyprland/workspaces": {
+    "tooltip": false,
     "persistent-workspaces": {
       "*": 5
     }

@@ -6,6 +6,12 @@ escape_pango() {
     echo "$1" | sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g'
 }
 
+# Emit waybar JSON: scrolling text, full title as tooltip
+emit() {
+    jq -cn --arg text "$(escape_pango "$1")" --arg tooltip "$(escape_pango "$2")" \
+        '{text: $text, tooltip: $tooltip}'
+}
+
 # Clean up background processes if the main script exits
 cleanup() {
     if [ "$LAST_PID" -ne 0 ]; then
@@ -26,7 +32,7 @@ stdbuf -oL playerctl -p spotify metadata --format '{{title}} - {{artist}}' -F 2>
     LEN=${#NEW}
 
     if [ $LEN -le $MAX ]; then
-        escape_pango "$NEW"
+        emit "$NEW" "$NEW"
     else
         TEXT="$NEW    $NEW    "
         TOTAL_LEN=$((LEN + 4)) 
@@ -36,7 +42,7 @@ stdbuf -oL playerctl -p spotify metadata --format '{{title}} - {{artist}}' -F 2>
             POS=0
             while true; do
                 RAW_CHUNK="${TEXT:$POS:$MAX}"
-                escape_pango "$RAW_CHUNK"
+                emit "$RAW_CHUNK" "$NEW"
                 POS=$(( (POS + 1) % TOTAL_LEN ))
                 sleep 0.25
             done
