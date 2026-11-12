@@ -19,16 +19,14 @@
 
   "custom/spotify-prev": {
     "format": "󰒮",
-    "exec": "playerctl -p spotify status 2>/dev/null | grep -qE 'Playing|Paused' && echo 'show'",
-    "on-click": "playerctl -p spotify previous",
-    "interval": 0
+    "exec": "playerctl -p spotify status -F 2>/dev/null | while read -r s; do case \"$s\" in Playing|Paused) echo show ;; *) echo ;; esac; done",
+    "on-click": "playerctl -p spotify previous"
   },
 
   "custom/spotify-next": {
     "format": "󰒭",
-    "exec": "playerctl -p spotify status 2>/dev/null | grep -qE 'Playing|Paused' && echo 'show'",
-    "on-click": "playerctl -p spotify next",
-    "interval": 0
+    "exec": "playerctl -p spotify status -F 2>/dev/null | while read -r s; do case \"$s\" in Playing|Paused) echo show ;; *) echo ;; esac; done",
+    "on-click": "playerctl -p spotify next"
   },
 
   "custom/spotify": {
